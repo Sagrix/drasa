@@ -8,7 +8,7 @@ class Results extends React.Component{
         return(
             <Wrapper>
                 <Page>Results</Page>  
-                <Button1>Back</Button1>
+                
                 <Message>
 
                   
@@ -20,9 +20,10 @@ class Results extends React.Component{
                 Thank you for your patience.<br /><br />
                 Regards, <br />
                 Doctor Name.
-</Message>
+                </Message>
 
                 <Button2>Set Up Appointment</Button2>
+                <Button1>Back</Button1>
             </Wrapper>
         )
     }
