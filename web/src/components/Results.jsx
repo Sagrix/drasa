@@ -1,76 +1,47 @@
 import React from 'react'
 import styled from 'styled-components'
 
-class Result extends React.Component{
-    constructor(props){
-        super(props)
-        this.state = {
-            providedUid: '',
-            generatedUid: ''
-        }
-    }
+class Results extends React.Component{
 
-    handleSubmitClick(){
-        this.props.history.push('/menu')
-    }
-
-    handleSwitchClick(){
-        this.props.history.push(this.props.formType === 'login' ? '/register' : '/login')
-    }
 
     render(){
-        const {
-            providedUid,
-            generatedUid
-        } = this.state
-
-        const {
-            formType,
-            history
-        } = this.props
-
-        const switchPrompt = formType === 'login' ? `Don't have a Unique ID?` : `Want to use an existing Unique ID?`
-
         return(
             <Wrapper>
-                <Form>
-                    <div>
-                        <Label>Unique ID</Label>
-                        <Input  type='text' 
-                                disabled={formType === 'register'}
-                                value={formType === 'login' ? providedUid : generatedUid}
-                                onChange={(e) => this.setState({providedUid: e.value})}/>
-                    </div>
-                    <div>
-                        <Label>Password</Label>
-                        <Input type='password'/>
-                    </div>
-                    <Submit type='submit' 
-                            value={formType === 'login' ? 'Login' : 'Register'}
-                            onClick={() => this.handleSubmitClick()}></Submit>
-                    <Switcher onClick={() => this.handleSwitchClick()}>{switchPrompt}</Switcher>
-                </Form>
+                <Page>Results</Page>  
+                <Button1>Back</Button1>
+                <Message>
+
+                  
+                    
+                Hello there,<br /><br />
+                I am glad to inform you that your results are ready. 
+                Please set an appointment with me to receive your results. 
+                <br /><br />
+                Thank you for your patience.<br /><br />
+                Regards, <br />
+                Doctor Name.
+</Message>
+
+                <Button2>Set Up Appointment</Button2>
             </Wrapper>
         )
     }
 }
 
-export default Result
+export default Results
 
 const Wrapper = styled.div`
-    background: linear-gradient(#3f5d83, #323e4f);
+    background: white;
     margin: 0;
     padding: 0;
     height: 100vh;
 `
 
-const Form = styled.div`
-    width: 50%;
-    margin: 0 auto;
-    padding: 5vh 5%;
-    border-radius: 3px;
-    padding-top: 50vh;
-    height: 50vh;
+const Message = styled.div`
+ position: absolute;
+ left: 20px
+ top: 180px
+ right: 20px;
 `
 
 const Label = styled.label`
@@ -117,4 +88,26 @@ const Switcher = styled.p`
     display: block;
     text-decoration: underline;
     text-align: center;
+`
+
+const Button1 = styled.button `
+font-size: 13px;
+font-family: Open Sans;
+position: absolute;
+bottom:  4px;
+cursor: pointer;
+left: 4px;
+`
+const Button2 = styled.button `
+font-size: 13px;
+font-family: Open Sans;
+position: absolute;
+bottom:  4px;
+cursor: pointer;
+right: 4px;
+`
+
+const Page = styled.h1`
+color: #008080;
+text-align: center;
 `
