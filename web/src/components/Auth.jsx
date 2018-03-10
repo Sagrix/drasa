@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 
 class Auth extends React.Component{
-    constructor(props){
+    constructor(props) {
         super(props)
         this.state = {
             providedUid: '',
@@ -10,15 +10,15 @@ class Auth extends React.Component{
         }
     }
 
-    handleSubmitClick(){
+    handleSubmitClick() {
         this.props.history.push('/menu')
     }
 
-    handleSwitchClick(){
+    handleSwitchClick() {
         this.props.history.push(this.props.formType === 'login' ? '/register' : '/login')
     }
 
-    render(){
+    render() {
         const {
             providedUid,
             generatedUid
