@@ -1,3 +1,9 @@
+# Android and Truffle
+npm-debug.*
+build/
+android/local.properties
+android/.gradle
+
 # Logs
 logs
 *.log

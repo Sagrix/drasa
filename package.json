@@ -1,0 +1,49 @@
+{
+  "name": "drasa",
+  "version": "0.1.0",
+  "private": true,
+  "devDependencies": {
+    "babel-preset-react-native-stage-0": "^1.0.1",
+    "jest-expo": "^21.0.2",
+    "react-test-renderer": "16.0.0-alpha.12",
+    "redux-devtools": "^3.4.0",
+    "truffle-contract": "^3.0.0"
+  },
+  "scripts": {
+    "start": "react-native start",
+    "android": "react-native run-android",
+    "ios": "react-native run-ios",
+    "test": "node node_modules/jest/bin/jest.js --watch",
+    "start-rpc": "testrpc -p 8545",
+    "truffle": "truffle compile && truffle migrate --reset"
+  },
+  "jest": {
+    "preset": "jest-expo"
+  },
+  "dependencies": {
+    "babel-preset-es2015": "^6.24.1",
+    "bluebird": "^3.5.1",
+    "buffer": "^5.0.8",
+    "node-libs-browser": "^2.0.0",
+    "process": "^0.11.10",
+    "react": "16.0.0-alpha.12",
+    "react-native": "^0.48.4",
+    "react-native-bip39": "^2.3.0",
+    "react-native-elements": "^0.17.0",
+    "react-native-modal-picker": "0.0.16",
+    "react-native-randombytes": "^3.0.0",
+    "react-native-vector-icons": "^4.4.2",
+    "react-navigation": "^1.0.0-beta.15",
+    "react-redux": "^5.0.6",
+    "redux": "^3.7.2",
+    "redux-thunk": "^2.2.0",
+    "truffle-hdwallet-provider": "0.0.3",
+    "web3": "^0.20.0"
+  },
+  "react-native": {
+    "crypto": "react-native-crypto"
+  },
+  "browser": {
+    "crypto": "react-native-crypto"
+  }
+}
