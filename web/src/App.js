@@ -1,6 +1,7 @@
 import React from 'react'
 import { Route, Switch } from 'react-router-dom'
 import Auth from './components/Auth'
+import PastResults from './components/PastResults'
 import { injectGlobal } from 'styled-components'
 
 class App extends React.Component{
@@ -16,6 +17,9 @@ class App extends React.Component{
             <Switch>
                 <Route exact path='/:path(login|register)' render={props =>
                     <Auth {...props} formType={props.match.params.path} />
+                }/>
+                <Route exact path='/view/past' render={props =>
+                    <PastResults {...props} formType={props.match.params.path} />
                 }/>
             </Switch>
         )
