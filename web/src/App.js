@@ -1,6 +1,7 @@
 import React from 'react'
 import { Route, Switch } from 'react-router-dom'
 import Auth from './components/Auth'
+import Chat from './components/Chat'
 import PastResults from './components/PastResults'
 import CurrentProgress from './components/CurrentProgress'
 import { injectGlobal } from 'styled-components'
@@ -24,6 +25,9 @@ class App extends React.Component{
                 }/>
                 <Route exact path='/view/current' render={props =>
                     <CurrentProgress {...props}/>
+                }/>
+                <Route exact path='/chat' render={props =>
+                    <Chat {...props} formType={props.match.params.path} />
                 }/>
             </Switch>
         )
