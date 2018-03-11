@@ -35,7 +35,7 @@ class Auth extends React.Component{
 
         return(
             <Wrapper>
-                <img src={logo} height = "180" width ="180" />
+                <Logo src={logo} height = "180" width ="180" />
                 <Form>
                     
                     <div>
@@ -66,12 +66,6 @@ const Wrapper = styled.div`
     margin: 0;
     padding: 0;
     height: 100vh;
-
-    img {
-        position: absolute;
-        top: 50px;
-        left: 70px;
-    }
 `
 
 const Form = styled.div`
@@ -127,4 +121,11 @@ const Switcher = styled.p`
     display: block;
     text-decoration: underline;
     text-align: center;
+`
+
+const Logo = styled.img`
+    position: absolute;
+    top: 10vh;
+    left: 50%;
+    transform: translateX(-50%);
 `
