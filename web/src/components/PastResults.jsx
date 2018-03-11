@@ -19,7 +19,7 @@ class PastResults extends React.Component{
                             <Field>{result.condition}</Field>
                             <Field>{result.date}</Field>
                             <Field>
-                                <Button onClick={() => this.props.history.push(`/result/${result.result}`)}>View Result</Button>
+                                <Button onClick={() => this.props.history.push(`/results`)}>View Result</Button>
                             </Field>
                         </Row>
                     ))
@@ -36,7 +36,7 @@ const Wrapper = styled.div`
     font-family: 'Open Sans';
     margin: 0;
     padding: 0;
-    height: 100vh;
+    height: calc(100vh - 50px);
 `
 
 const Row = styled.div`

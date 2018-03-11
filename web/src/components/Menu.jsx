@@ -44,14 +44,14 @@ const Wrapper = styled.div`
     background-size: contain;
     margin: 0;
     padding: 0;
-    height: 100vh;
+    height: calc(100vh - 50px);
 `
 
 const Row = styled.div`
     font-size: 32px;
     font-family: Oswald;
     width: 100%;
-    height: 33.33vh;
+    height: calc(33.33vh - 16.66px);
     text-align: center;
     background: rgba(33, 58, 90, 0.9);
     border-bottom: rgba(255,255,255, 0.5);

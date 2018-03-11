@@ -45,7 +45,7 @@ const Wrapper = styled.div`
     background: white;
     margin: 0;
     padding: 0;
-    height: 100vh;
+    height: calc(100vh - 50px);
     font-family: 'Open Sans';
 `
 

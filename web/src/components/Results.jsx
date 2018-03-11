@@ -18,11 +18,13 @@ class Results extends React.Component{
                  <br /><br />
                 Thanks for your patience.<br /><br />
                 Regards, <br />
-                Doctor Name.
+                Doctor Tom Isin.
                 </Message>
 
-                <Button2>Set Up Appointment</Button2>
-                <Button1>Back</Button1>
+                <Button2>Live Chat</Button2>
+                <Button2 style={{
+                    bottom: '15vh'
+                }}>Set Up Appointment</Button2>
             </Wrapper>
         )
     }
@@ -34,7 +36,8 @@ const Wrapper = styled.div`
     background: white;
     margin: 0;
     padding: 0;
-    height: 100vh;
+    font-family: 'Open Sans';
+    height: calc(100vh - 50px);
 `
 
 const Message = styled.div`
@@ -44,21 +47,21 @@ const Message = styled.div`
  right: 20px;
 `
 
-const Button1 = styled.button `
-font-size: 13px;
-font-family: Open Sans;
-position: absolute;
-bottom:  4px;
-cursor: pointer;
-left: 4px;
+const Button = styled.button`
+    background: transparent;
+    border: 2px solid #49c5b6;
+    color: #49c5b6;
+    border-radius: 3px;
 `
-const Button2 = styled.button `
+
+const Button2 = styled(Button) `
 font-size: 13px;
 font-family: Open Sans;
 position: absolute;
-bottom:  4px;
 cursor: pointer;
-right: 4px;
+bottom: 20vh;
+left: 50%;
+transform: translateX(-50%);
 `
 
 const Page = styled.h1`

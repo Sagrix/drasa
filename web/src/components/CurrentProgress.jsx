@@ -10,7 +10,7 @@ class CurrentProgress extends React.Component{
     }
 
     componentDidMount(){
-        setTimeout(() => this.setState({expandLines: true}, 100))
+        setTimeout(() => this.setState({expandLines: true}), 10)
     }
 
     render(){
@@ -31,7 +31,7 @@ class CurrentProgress extends React.Component{
                 <Line expandLines={expandLines}/>
                 <Step>Test in Progress</Step>
                 <Line expandLines={expandLines}/>
-                <Step>Sample Received</Step>
+                <Step>Results Out</Step>
             </Wrapper>
         )
     }
@@ -45,7 +45,7 @@ const Wrapper = styled.div`
     margin: 0;
     padding: 5vh 5%;
     padding-bottom: 0;
-    height: 100vh;
+    height: calc(100vh - 50px);
 `
 
 const Header = styled.div`
