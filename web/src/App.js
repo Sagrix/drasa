@@ -35,7 +35,7 @@ class App extends React.Component{
                 <Route exact path='/view/current' render={props =>
                     <CurrentProgress {...props}/>
                 }/>
-                <Route exact path='/chat' render={props =>
+                <Route exact path='/chat/:id' render={props =>
                     <Chat {...props} formType={props.match.params.path}/>
                 }/>
                 <Route exact path='/menu' render={props =>

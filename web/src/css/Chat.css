@@ -99,7 +99,7 @@ h3 {
   font-size: 14px;
 }
 
-.input input[type="submit"] {
+.input button[type="submit"] {
   background: linear-gradient(#3f5d83, #323e4f);
   color: black;
   border: 1px solid transparent;
@@ -113,7 +113,7 @@ h3 {
   transition: all 0.3s ease;
 }
 
-.input input[type="submit"]:hover {
+.input button[type="submit"]:hover {
   background: linear-gradient(#323e4f, #3f5d83);
   color: #fff;
 }
