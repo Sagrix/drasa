@@ -14,9 +14,17 @@ class Menu extends React.Component{
         this.props.history.push('/request')
     }
 
+    handleChatClick(){
+        this.props.history.push('/chat/0')
+    }
+
     render(){
         return (
             <Wrapper>
+                    <Row
+                    onClick={() => this.handleChatClick()}>
+                        <VerticalMiddle>Live Chat</VerticalMiddle>
+                    </Row>
                     <Row
                     onClick={() => this.handleCurrentClick()}>
                         <VerticalMiddle>View Current Tests</VerticalMiddle>
@@ -51,7 +59,7 @@ const Row = styled.div`
     font-size: 32px;
     font-family: Oswald;
     width: 100%;
-    height: calc(33.33vh - 16.66px);
+    height: calc(25vh - 12.5px);
     text-align: center;
     background: rgba(33, 58, 90, 0.9);
     border-bottom: rgba(255,255,255, 0.5);
