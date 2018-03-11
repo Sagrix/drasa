@@ -21,7 +21,7 @@ class Results extends React.Component{
                 Doctor Tom Isin.
                 </Message>
 
-                <Button2>Live Chat</Button2>
+                <Button2 onClick={() => this.props.history.push('/chat/0')}>Live Chat</Button2>
                 <Button2 style={{
                     bottom: '15vh'
                 }}>Set Up Appointment</Button2>
