@@ -26,16 +26,16 @@ class Menu extends React.Component{
                         <VerticalMiddle>Live Chat</VerticalMiddle>
                     </Row>
                     <Row
+                    onClick={() => this.handleRequestClick()}>
+                        <VerticalMiddle>Request New Test</VerticalMiddle>
+                    </Row>
+                    <Row
                     onClick={() => this.handleCurrentClick()}>
                         <VerticalMiddle>View Current Tests</VerticalMiddle>
                     </Row>
                     <Row
                     onClick={() => this.handlePastClick()}>
                         <VerticalMiddle>View Past Tests</VerticalMiddle>
-                    </Row>
-                    <Row
-                    onClick={() => this.handleRequestClick()}>
-                        <VerticalMiddle>Request New Test</VerticalMiddle>
                     </Row>
             </Wrapper>
         )
