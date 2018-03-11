@@ -8,7 +8,7 @@ class Auth extends React.Component{
         super(props)
         this.state = {
             providedUid: '',
-            generatedUid: ''
+            generatedUid: 'CC15RA'
         }
     }
 
