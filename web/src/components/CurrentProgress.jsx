@@ -21,11 +21,15 @@ class CurrentProgress extends React.Component{
         return(
             <Wrapper>
                 <Header>
-                    Gonorrhea Test<br/>Requested on 16/01/2018
+                    Gonorrhea Test<br/>Requested on 11/03/2018
                 </Header>
-                <Step active>Sample Received</Step>
+                <Step active>Kit Requested</Step>
                 <Line active expandLines={expandLines}/>
-                <Step active>Test in Progress</Step>
+                <Step>Kit Arrived</Step>
+                <Line expandLines={expandLines}/>
+                <Step>Sample Received</Step>
+                <Line expandLines={expandLines}/>
+                <Step>Test in Progress</Step>
                 <Line expandLines={expandLines}/>
                 <Step>Sample Received</Step>
             </Wrapper>

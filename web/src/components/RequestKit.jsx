@@ -46,6 +46,7 @@ const Wrapper = styled.div`
     margin: 0;
     padding: 0;
     height: 100vh;
+    font-family: 'Open Sans';
 `
 
 const Message = styled.div`
@@ -56,7 +57,15 @@ const Message = styled.div`
  right: 20px;
 `
 
-const Button1 = styled.button `
+const Button = styled.button`
+    background: transparent;
+    border: 2px solid #49c5b6;
+    color: #49c5b6;
+    border-radius: 3px;
+    margin: 4px 5%;
+`
+
+const Button1 = styled(Button) `
 font-size: 13px;
 font-family: Open Sans;
 position: absolute;
@@ -64,7 +73,7 @@ bottom:  4px;
 cursor: pointer;
 left: 4px;
 `
-const Button2 = styled.button `
+const Button2 = styled(Button) `
 font-size: 13px;
 font-family: Open Sans;
 position: absolute;

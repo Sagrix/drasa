@@ -40,7 +40,8 @@ export default Menu
 
 
 const Wrapper = styled.div`
-    background: #f4f7f6;
+    background-image: url("https://i.pinimg.com/originals/c4/d5/66/c4d566ef5b0b556b03b8917e83351d20.jpg");
+    background-size: contain;
     margin: 0;
     padding: 0;
     height: 100vh;
@@ -52,10 +53,10 @@ const Row = styled.div`
     width: 100%;
     height: 33.33vh;
     text-align: center;
-    background: #f4f7f6;
-    border: 0px;
-    color: #202121;
-    border-bottom: 1px solid #ddd;
+    background: rgba(33, 58, 90, 0.9);
+    border-bottom: rgba(255,255,255, 0.5);
+    border-bottom: 1px solid rgba(255,255,255,0.3);
+    color: #f4f7f6;
     display: table;
 `
 
