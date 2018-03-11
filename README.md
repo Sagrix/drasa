@@ -7,7 +7,7 @@ Drasa is an anonymous messaging platform that connects patients to healthcare pr
 
 This project was built during during the Hacking Health St. John's Hackathon 2018.
 
-###Team Members
+### Team Members
 - Tomisin Jenrola
 - Moustafa Elsisy
 - Tony Lucas
