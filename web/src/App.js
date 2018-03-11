@@ -9,7 +9,7 @@ import CurrentProgress from './components/CurrentProgress'
 import { injectGlobal } from 'styled-components'
 
 class App extends React.Component{
-    render(){
+    render(){+
         injectGlobal`
             body{
                 margin: 0;

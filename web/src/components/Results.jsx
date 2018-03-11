@@ -14,10 +14,9 @@ class Results extends React.Component{
                   
                     
                 Hello there,<br /><br />
-                I am glad to inform you that your results are ready. 
-                Please set an appointment with me to receive your results. 
+               Your sample has been tested and the results are ready. Please contact me to receive them. 
                 <br /><br />
-                Thank you for your patience.<br /><br />
+                Thanks for your patience.<br /><br />
                 Regards, <br />
                 Doctor Name.
                 </Message>
