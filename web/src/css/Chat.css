@@ -40,7 +40,7 @@ h3 {
   box-sizing: border-box;
   padding: 0 20px;
   margin: 10px 0 0;
-  height: 100vh;
+  height: calc(100vh - 80px);
   overflow-y: scroll;
   margin-top: -10px;
 }

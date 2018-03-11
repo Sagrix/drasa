@@ -10,7 +10,35 @@ class CurrentProgress extends React.Component{
     }
 
     componentDidMount(){
-        setTimeout(() => this.setState({expandLines: true}), 10)
+        this.expandLines = setTimeout(() => this.setState({expandLines: true}), 10)
+        this.notify = setTimeout(() => this.pushNotification(), 4000)
+    }
+
+    componentWillUnmount(){
+        clearTimeout(this.expandLines)
+        clearTimeout(this.notify)
+    }
+
+    pushNotification(){
+        if (Notification.permission === "granted") {
+            this.generateNotification()
+          }
+        
+          // Otherwise, we need to ask the user for permission
+          else if (Notification.permission !== "denied") {
+            Notification.requestPermission( (permission) => {
+              if(permission)
+                this.generateNotification()
+            })
+          }
+    }
+
+    generateNotification(){
+        var notification = new Notification("The results of your requested test are ready.")
+        notification.onclick = () => {
+            this.props.history.push('/results')
+            notification.close()
+        }
     }
 
     render(){
