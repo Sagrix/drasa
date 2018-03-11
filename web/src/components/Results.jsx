@@ -15,7 +15,7 @@ class Results extends React.Component{
                     
                 Hello there,<br /><br />
                Your sample has been tested and the results are ready. Please contact me to receive them. 
-                <br /><br />
+                 <br /><br />
                 Thanks for your patience.<br /><br />
                 Regards, <br />
                 Doctor Name.
