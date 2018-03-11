@@ -6,6 +6,7 @@ import RequestKit from './components/RequestKit'
 import Chat from './components/Chat'
 import PastResults from './components/PastResults'
 import CurrentProgress from './components/CurrentProgress'
+import Menu from './components/Menu'
 import { injectGlobal } from 'styled-components'
 
 class App extends React.Component{
@@ -35,7 +36,10 @@ class App extends React.Component{
                     <CurrentProgress {...props}/>
                 }/>
                 <Route exact path='/chat' render={props =>
-                    <Chat {...props} formType={props.match.params.path} />
+                    <Chat {...props} formType={props.match.params.path}/>
+                }/>
+                <Route exact path='/menu' render={props =>
+                    <Menu {...props} formType={props.match.params.path} />
                 }/>
             </Switch>
         )
