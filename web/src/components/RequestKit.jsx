@@ -3,7 +3,10 @@ import styled from 'styled-components'
 
 class RequestKit extends React.Component{
 
-
+    handleRequestClick()
+    {
+        this.props.history.push('/view/current')
+    }
     render(){
         return(
             <Wrapper>
@@ -29,7 +32,7 @@ class RequestKit extends React.Component{
 </Options>
                 </Message>
 
-                <Button2>Request</Button2>
+                <Button2  onClick={() => this.handleRequestClick()}>Request</Button2>
                 <Button1>Back</Button1>
             </Wrapper>
         )

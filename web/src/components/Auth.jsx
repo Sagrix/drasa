@@ -1,6 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
 
+const logo = require('../images/logo.png')
+
 class Auth extends React.Component{
     constructor(props) {
         super(props)
@@ -33,7 +35,9 @@ class Auth extends React.Component{
 
         return(
             <Wrapper>
+                <img src={logo} height = "180" width ="180" />
                 <Form>
+                    
                     <div>
                         <Label>Unique ID</Label>
                         <Input  type='text' 
@@ -62,6 +66,12 @@ const Wrapper = styled.div`
     margin: 0;
     padding: 0;
     height: 100vh;
+
+    img {
+        position: absolute;
+        top: 50px;
+        left: 70px;
+    }
 `
 
 const Form = styled.div`
