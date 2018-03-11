@@ -39,10 +39,10 @@ class App extends React.Component{
                         <CurrentProgress {...props}/>
                     }/>
                     <Route exact path='/chat/:id' render={props =>
-                        <Chat {...props} formType={props.match.params.path}/>
+                        <Chat {...props} />
                     }/>
                     <Route exact path='/menu' render={props =>
-                        <Menu {...props} formType={props.match.params.path} />
+                        <Menu {...props}  />
                     }/>
                 </Switch>
             </div>
