@@ -97,7 +97,6 @@ class Chat extends React.Component {
 
         return (
             <Wrapper>
-                <h3>Drasa</h3>
                 <ul className="chats" ref="chats">
                     {
                         chats.map((chat) => 
