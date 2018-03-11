@@ -21,7 +21,7 @@ class CurrentProgress extends React.Component{
         return(
             <Wrapper>
                 <Header>
-                    {this.state.option} Test<br/>Requested on 11/03/2018
+                    Gonnorhoea Test<br/>Requested on 11/03/2018
                 </Header>
                 <Step active>Kit Requested</Step>
                 <Line active expandLines={expandLines}/>
