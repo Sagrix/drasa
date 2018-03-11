@@ -5,7 +5,7 @@ class RequestKit extends React.Component{
 
     handleRequestClick()
     {
-        this.props.history.push({pathname: '/view/current', state: {option: this.state.option}})
+        this.props.history.push('/view/current')
     }
     render(){
         return(
@@ -22,9 +22,10 @@ class RequestKit extends React.Component{
                         <option>Chlamydia</option>
                     </select> */}
                     <br />
-                    <Options onChange={e => this.setState({option: e.target.value})}>
-                       <input type="radio" name="disease"/>HIV/AIDS<br /> 
+                     <Options> {/* onChange={e => this.setState({option: e.target.value})}> */}
+                    <br /> 
                         <input type="radio" name="disease"/>Syhpilis<br />
+                        <input type="radio" name="disease"/>HIV/AIDS<br />
                         <input type="radio" name="disease"/>Gonorrhoea<br />
                         <input type="radio" name="disease"/>Chlamydia
 

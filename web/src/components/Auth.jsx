@@ -8,7 +8,8 @@ class Auth extends React.Component{
         super(props)
         this.state = {
             providedUid: '',
-            generatedUid: 'CC15RA'
+            generatedUid: 'CC15RA',
+            isHidden: false
         }
     }
 
@@ -18,6 +19,8 @@ class Auth extends React.Component{
 
     handleSwitchClick() {
         this.props.history.push(this.props.formType === 'login' ? '/register' : '/login')
+        this.setState({isHidden: !this.state.isHidden})
+
     }
 
     render() {
@@ -35,7 +38,7 @@ class Auth extends React.Component{
 
         return(
             <Wrapper>
-                <Logo src={logo} height = "180" width ="180" />
+                <Logo src={logo} height="180" width="180" />
                 <Form>
                     
                     <div>
@@ -43,12 +46,16 @@ class Auth extends React.Component{
                         <Input  type='text' 
                                 disabled={formType === 'register'}
                                 value={formType === 'login' ? providedUid : generatedUid}
-                                onChange={(e) => this.setState({providedUid: e.value})}/>
+                                onChange={(e) => this.setState({providedUid: e.value})}                                />
                     </div>
                     <div>
                         <Label>Password</Label>
                         <Input type='password'/>
                     </div>
+                    {this.state.isHidden && <div>
+                        <Label>MCP</Label>
+                        <Input type='text'  />
+                    </div>}
                     <Submit type='submit' 
                             value={formType === 'login' ? 'Login' : 'Register'}
                             onClick={() => this.handleSubmitClick()}></Submit>
@@ -86,7 +93,7 @@ const Label = styled.label`
 `
 
 const Input = styled.input`
-    margin-bottom: 10px;
+    margin-bottom: 6px;
     border-radius: 3px;
     border: 0px;
     padding: 6px;
